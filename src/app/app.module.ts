@@ -8,6 +8,7 @@ import { routes } from './routes';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
+import { QuicklinkStrategy } from 'ngx-quicklink';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryStoreService } from '../api/in-memory-store.service';
 
@@ -57,7 +58,7 @@ import { InMemoryStoreService } from '../api/in-memory-store.service';
        *  - https://dev.to/angular/predictive-preloading-strategy-for-your-angular-bundles-4bgl
        *
        */
-      { preloadingStrategy: NoPreloading }
+      { preloadingStrategy: QuicklinkStrategy }
     ),
     CoreModule
     // InMemoryWebApiModule.forRoot(InMemoryStoreService, { delay: 10 })
